@@ -1,0 +1,24 @@
+{
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "git.autofetch": true,
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+    "workbench.preferredHighContrastLightColorTheme": "GitHub Light High Contrast",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "window.autoDetectColorScheme": true,
+    "workbench.editor.tabCloseButton": "left",
+    "workbench.editor.showIcons": false,
+    "editor.fontFamily": "'Monaspace Neon', monospace",
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
+    "editor.lineHeight": 1.6,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path-linux": "/home/codespace/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+}
