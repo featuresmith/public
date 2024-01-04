@@ -1,0 +1,10 @@
+version = 1
+
+[[analyzers]]
+name = "scala"
+
+[[analyzers]]
+name = "secrets"
+
+[[transformers]]
+name = "scalafmt"
