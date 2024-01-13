@@ -1,0 +1,6 @@
+.ijwb
+
+bazel-bin
+bazel-out
+bazel-public
+bazel-testlogs
