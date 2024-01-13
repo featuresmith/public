@@ -1,0 +1,9 @@
+directories:
+  .
+
+targets:
+  //...
+  //src/scala/app:app
+
+additional_languages:
+  scala
