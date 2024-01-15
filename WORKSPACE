@@ -19,44 +19,44 @@ http_archive(
   strip_prefix = "bazel-skylib-%s" % bazel_skylib_tag,
   sha256       = bazel_skylib_sha,
 )
-#http_archive(
-#    name         = "rules_java",
-#    strip_prefix = "rules_java-%s" % rules_java_version,
-#    url          = "https://github.com/bazelbuild/rules_java/archive/refs/tags/%s.tar.gz" % rules_java_version,
-#    sha256       = rules_java_hash,
-#)
+http_archive(
+    name         = "rules_java",
+    strip_prefix = "rules_java-%s" % rules_java_version,
+    url          = "https://github.com/bazelbuild/rules_java/archive/refs/tags/%s.tar.gz" % rules_java_version,
+    sha256       = rules_java_hash,
+)
 http_archive(
   name         = "io_bazel_rules_scala",
   url          = "https://github.com/bazelbuild/rules_scala/archive/%s.tar.gz" % rules_scala_tag,
   strip_prefix = "rules_scala-%s" % rules_scala_tag,
   sha256       = rules_scala_sha,
 )
-#http_archive(
-#  name         = "rules_jvm_external",
-#  url          = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % rules_jvm_external_tag,
-#  strip_prefix = "rules_jvm_external-%s" % rules_jvm_external_tag,
-#  sha256       = rules_jvm_external_sha,
-#)
+http_archive(
+  name         = "rules_jvm_external",
+  url          = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % rules_jvm_external_tag,
+  strip_prefix = "rules_jvm_external-%s" % rules_jvm_external_tag,
+  sha256       = rules_jvm_external_sha,
+)
 
-#load("@rules_java//java:repositories.bzl", "rules_java_dependencies", "rules_java_toolchains")
-#rules_java_dependencies()
-#rules_java_toolchains()
+load("@rules_java//java:repositories.bzl", "rules_java_dependencies", "rules_java_toolchains")
+rules_java_dependencies()
+rules_java_toolchains()
 
-#load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
-#rules_jvm_external_deps()
-#load("@rules_jvm_external//:setup.bzl", "rules_jvm_external_setup")
-#rules_jvm_external_setup()
-#load("@rules_jvm_external//:defs.bzl", "maven_install")
+load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
+rules_jvm_external_deps()
+load("@rules_jvm_external//:setup.bzl", "rules_jvm_external_setup")
+rules_jvm_external_setup()
+load("@rules_jvm_external//:defs.bzl", "maven_install")
 
-#maven_install(
-#  artifacts = [
-#    "org.typelevel:cats-core_3:2.9.0",
-#  ],
-#  repositories = [
-#    "https://repo1.maven.org/maven2",
-#  ],
-#  fetch_sources = True,
-#)
+maven_install(
+  artifacts = [
+    "org.typelevel:cats-core_3:2.9.0",
+  ],
+  repositories = [
+    "https://repo1.maven.org/maven2",
+  ],
+  fetch_sources = True,
+)
 
 # Scala
 load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
