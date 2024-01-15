@@ -55,10 +55,13 @@ maven_install(
   repositories = [
     "https://repo1.maven.org/maven2",
   ],
+  maven_install_json = "@//:maven_install.json",
   fetch_sources = True,
 )
 
-# Scala
+load("@maven//:defs.bzl", "pinned_maven_install")
+pinned_maven_install()
+
 load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
 scala_config(scala_version = "3.2.1", enable_compiler_dependency_tracking = True)
 load("@io_bazel_rules_scala//scala:scala.bzl", "rules_scala_setup", "rules_scala_toolchain_deps_repositories")
